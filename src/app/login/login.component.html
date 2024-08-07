@@ -1,0 +1,14 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" class="login-form">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required [(ngModel)]="username">
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required [(ngModel)]="password">
+  <div></div>
+    <input type="submit" value="Login" class="btn btn-primary">
+    <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+    <button (click)="goToRegister()" class="btn btn-primary">Register</button>
+  </form>
+</div>

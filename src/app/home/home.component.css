@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.hub-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Kareler arasındaki boşluk */
+    max-width: 800px; /* İsteğe bağlı olarak genişliği ayarlayabilirsiniz */
+    margin: 50px auto 0; /* Üstten 50px boşluk, diğer taraflar otomatik hizalama */
+    padding-top: 20px; /* Opsiyonel: Üst boşluk ile arasındaki mesafe */
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .hub-item {
+    width: calc(33.33% - 40px);
+    text-align: center;
+    position: relative; /* Pozisyonu göreceli olarak ayarlıyoruz */
+    overflow: hidden; /* İçeriği dışarı taşan kısımları gizle */
+    padding: 10px;
+  }
+  
+  .hub-item span {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative; /* Pozisyonu göreceli olarak ayarlıyoruz */
+    z-index: 1; /* Metnin üstte olması için */
+  }
+  
+  .hub-item::before {
+    content: ''; /* Turuncu içi boş kare için pseudo-element oluşturuyoruz */
+    position: absolute; /* Pozisyonu mutlak olarak ayarlıyoruz */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 4px solid orange; /* Turuncu sınır */
+    border-radius: 15px; /* Oval köşeler */
+    z-index: 0; /* Kareyi arka planda kalması için */
+  }
+  
+  .hub-item img {
+    width: 100px; /* İsteğe bağlı olarak resim boyutunu ayarlayabilirsiniz */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  
+  .placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  /* İsimler için stil */
+  .hub-item span {
+    display: block;
+    margin-top: 10px;
+  }
+  .site-header {
+    background-color: orange; /* Turuncu arka plan */
+    text-align: center;
+    padding: 20px 0; /* Boşluklar */
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .site-header h1 {
+    margin: 0;
+    color: white; /* Yazı rengi */
+  }
+  
